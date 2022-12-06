@@ -1,0 +1,133 @@
+openapi: 3.0.3
+info:
+  title: Binar Challenge Platinum
+  version: 1.0.0
+  description: Predicted Sentiment Analysis using LSTM and RNN
+  termsOfService: https://github.com/Islahuddin41420110058/CHALLENGE
+  contact:
+    name: Kelompok 1 - Data Science Wave 1
+    email: islahuddindidin@gmail.com
+    url: https://github.com/Islahuddin41420110058
+  license:
+    name: APACHE 2.0
+    url: htpps://www.apache.org/licenses/LICENSE-2.0
+servers:
+  - description: Tworst! RESTful API Server
+    url: /
+externalDocs:
+  description: Github Code - Binar Platinum Challenge
+  url: https://github.com/Islahuddin41420110058/CHALLENGE
+paths:
+  /:
+    get:
+      summary: Welcome Page
+      description: Welcome to Tworst!
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Misunderstood
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+        '500':
+          description: Server Error
+  /nn/text:
+    post:
+      summary: Post a text
+      description: Post a text and get the sentiment
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Misunderstood
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+        '500':
+          description: Server Error
+  /nn/file:
+    post:
+      summary: Post a csv file
+      description: Post a csv file to get sentiment
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: base64
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Misunderstood
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+        '500':
+          description: Server Error
+  /lstm/text:
+    post:
+      summary: Post a text
+      description: Post a text and get the sentiment
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Misunderstood
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+        '500':
+          description: Server Error
+  /lstm/file:
+    post:
+      summary: Post a csv file
+      description: Post a csv file to get sentiment
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: base64
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Misunderstood
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+        '500':
+          description: Server Error
