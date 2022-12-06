@@ -1,4 +1,10 @@
 # CHALLENGE
 
-Before run API please train model first to get model.h5 and x_pad_sequences.pickle
-place model.h5 and x_pad_sequences.pickle in the same place with API.py
+before run api, input dataset train_preprocess.tsv
+train model in folder model > OVERRNN and OVERLSTM in google collab 
+save model.h5 
+download folder docs, static, and file .py at the same place
+run flask_swagger.py 
+open http://127.0.0.1:5000/swagger/
+then test your any text and file with 'click try it now'
+thank you
