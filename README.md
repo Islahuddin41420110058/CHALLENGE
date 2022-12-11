@@ -1,4 +1,4 @@
-# CHALLENGE
+# CHALLENGE PLATINUM SENTIMENT ANALYSIS USING LSTM & RNN 
 
 1. before run api, input dataset train_preprocess.tsv
 2. train model in folder model > OVERRNN and OVERLSTM in google collab 
